@@ -2,8 +2,6 @@
 
 Add a field type for storing the visits count for a entry.
 
-![Screenshot](resources/screenshots/plugin_logo.png)
-
 ## Installation
 
 To install Visits count field, follow these steps:
@@ -18,25 +16,41 @@ Visits count field works on Craft 2.4.x and Craft 2.5.x.
 
 ## Visits count field Overview
 
--Insert text here-
+With this plugin you can add a visitors count field to a section. The visits count will be stored in the entry's content, so you can use it in the craft.entries tag.
 
 ## Configuring Visits count field
 
--Insert text here-
+Add a field with type 'Visits count' to the sections you want to track. The field is just a disabled number field which stores the view counter.
 
 ## Using Visits count field
 
--Insert text here-
+Add the following code on the entry details page to increment the number:
+
+```
+{% do craft.visitsCountField.increment(entry) %}
+```
+
+Without the tag above the number will not increment, so you can add your own if-else statements if you want.
+The number will increment only once for the stored session ID, so refreshing the page will not increment the number.
+
+To show the visits count, you can render your own custom field by using the handle:
+
+```
+{{ entry.visitsCount }}
+```
 
 ## Visits count field Roadmap
 
-Some things to do, and ideas for potential features:
+* Reset visits count for a single entry
+* Reset all visits for a section
+* Reset all visits
+* Clear session IDs in visit count history
 
-* Release it
+Feel free to request any or fork this repo.
 
 ## Visits count field Changelog
 
-### 1.0.0 -- 2016.06.27
+### 1.0.0 -- 2016.06.28
 
 * Initial release
 

@@ -1,15 +1,4 @@
 <?php
-/**
- * Visits count field plugin for Craft CMS
- *
- * Add a field type for storing the visits count for a entry.
- *
- * @author    Jordy Versmissen
- * @copyright Copyright (c) 2016 Jordy Versmissen
- * @link      http://www.pixelcode.nl
- * @package   VisitsCountField
- * @since     1.0.0
- */
 
 namespace Craft;
 
@@ -27,7 +16,7 @@ class VisitsCountFieldPlugin extends BasePlugin
      */
     public function getName()
     {
-         return Craft::t('Visits count field');
+        return Craft::t('Visits count field');
     }
 
     /**
