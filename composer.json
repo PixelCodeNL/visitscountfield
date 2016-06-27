@@ -1,5 +1,5 @@
 {
-	"name": "jordypixelcode/visitscountfield'",
+	"name": "jordypixelcode/visitscountfield",
 	"description": "Add a field type for storing the visits count for a entry.",
 	"type": "craft-plugin",
 	"authors": [
