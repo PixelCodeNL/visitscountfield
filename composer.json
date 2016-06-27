@@ -1,0 +1,14 @@
+{
+	"name": "jordypixelcode/visitscountfield'",
+	"description": "Add a field type for storing the visits count for a entry.",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Jordy Versmissen",
+			"homepage": "http://www.pixelcode.nl"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
