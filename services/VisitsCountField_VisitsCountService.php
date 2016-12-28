@@ -11,6 +11,9 @@ class VisitsCountField_VisitsCountService extends BaseApplicationComponent
      */
     public function increment(EntryModel $entry)
     {
+        // Don't do anything in preview mode
+        if (!$entry->id) return;
+
         // Refresh the entry
         /** @var EntryModel $entry */
         $entry = craft()->entries->getEntryById($entry->id);
