@@ -54,4 +54,12 @@ Feel free to request any or fork this repo.
 
 * Initial release
 
+### 1.0.1 -- 2016.06.28
+
+* Bugfix: javascript error fixed
+
+### 1.0.2 -- 2016.12.28
+
+* Bugfix: crash live preview, see https://github.com/jordypixelcode/visitscountfield/pull/1
+
 Brought to you by [Jordy Versmissen](http://www.pixelcode.nl)

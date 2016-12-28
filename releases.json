@@ -6,5 +6,21 @@
         "notes": [
             "[Added] Initial release"
         ]
+    },
+    {
+        "version": "1.0.1",
+        "downloadUrl": "https://github.com/jordypixelcode/visitscountfield/archive/master.zip",
+        "date": "2016-06-28T13:34:10.988Z",
+        "notes": [
+            "[Bugfix] Fixed javascript error in backend"
+        ]
+    },
+    {
+        "version": "1.0.2",
+        "downloadUrl": "https://github.com/jordypixelcode/visitscountfield/archive/master.zip",
+        "date": "2016-12-28T07:44:10.988Z",
+        "notes": [
+            "[Bugfix] Crash live preview"
+        ]
     }
 ]
