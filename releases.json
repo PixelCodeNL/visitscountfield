@@ -22,5 +22,13 @@
         "notes": [
             "[Bugfix] Crash live preview"
         ]
+    },
+    {
+        "version": "1.0.3",
+        "downloadUrl": "https://github.com/jordypixelcode/visitscountfield/archive/master.zip",
+        "date": "2016-01-23T07:27:00.000Z",
+        "notes": [
+            "[Improvement] Speed up counting"
+        ]
     }
 ]

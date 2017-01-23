@@ -62,4 +62,9 @@ Feel free to request any or fork this repo.
 
 * Bugfix: crash live preview, see https://github.com/jordypixelcode/visitscountfield/pull/1
 
+### 1.0.3 -- 2017.01.23
+
+* Improvement: Speed up counting, see https://github.com/jordypixelcode/visitscountfield/pull/2
+
+
 Brought to you by [Jordy Versmissen](http://www.pixelcode.nl)
