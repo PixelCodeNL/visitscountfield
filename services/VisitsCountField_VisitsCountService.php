@@ -23,6 +23,7 @@ class VisitsCountField_VisitsCountService extends BaseApplicationComponent
             /** @var FieldLayoutFieldModel[] $fields */
             $fields = $entry->getFieldLayout()->getFields();
 
+            $handles = array();
             foreach ($fields as $fieldLayoutModel) {
                 $value = null;
 
@@ -36,28 +37,18 @@ class VisitsCountField_VisitsCountService extends BaseApplicationComponent
                         $value = 0;
                     }
                     $value++;
-                } elseif (
-                    $field->getFieldType() instanceof CategoriesFieldType
-                    || $field->getFieldType() instanceof AssetsFieldType
-                ) {
-                    // Hack for validation errors on relations with categories and assets
-                    // See http://craftcms.stackexchange.com/a/11146
-                    $value = $entry->{$handle}->ids();
-                }
 
-                if ($handle && $value) {
-                    $entry->setContentFromPost([
-                        $handle => $value
-                    ]);
+                    $handles['field_'.$handle] = $value;
                 }
             }
 
-            if (craft()->entries->saveEntry($entry)) {
-                $this->registerSessionForEntry($sessionId, $entry);
-            } else {
-                VisitsCountFieldPlugin::log(
-                    sprintf('Cannot save entry for visits count: %s', print_r($entry->getAllErrors(), true))
-                );
+            if (count($handles)) {
+                $result = craft()->db->createCommand()
+                            ->update('content', $handles, 'elementId = :id', array(':id' => $entry->id));
+
+                if ($result) {
+                    $this->registerSessionForEntry($sessionId, $entry);
+                }
             }
         }
     }
